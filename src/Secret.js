@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-export default class Home extends Component {
+export default class Secret extends Component {
   constructor() {
     super();
     this.state = {
@@ -9,13 +9,13 @@ export default class Home extends Component {
   }
 
   componentDidMount() {
-    fetch('/api/home')
+    fetch('/api/secret')
       .then(res=> res.text())
       .then(res => this.setState({message: res}));
   }
   render() {
     return (
-      <div className="Home">
+      <div className="Secret">
         <p>{this.state.message}</p>
       </div>
     );
